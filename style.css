@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+body {
+  font-weight: 700;
+  font-family: 'Lexend Deca', sans-serif;
+  display: grid;
+  place-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  caret-color: transparent;
+  background-color: hsla(233, 47%, 7%, 1);
+  text-align: center;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: hsla(246, 38%, 16%, 1);
+  width: 21.8rem;
+  box-shadow: 0px 20px 20px -10px rgba(23, 25, 41, 0.20);
+  display: grid;
+  grid-template-rows: 16rem 36rem;
+  grid-template-areas: 
+  "hero"
+  "main-content";
+}
+
+.main-content :nth-child(3) {
+  grid-area: ten-k;
+}
+.main-content :nth-child(4) {
+  grid-area: companies;
+}
+
+.main-content :nth-child(5) {
+  grid-area: three-1-4;
+}
+
+.main-content :nth-child(6) {
+  grid-area: templates;
+}
+
+.main-content :nth-child(7) {
+  grid-area: twelve-mil;
+}
+
+.main-content :nth-child(8) {
+  grid-area: queries;
+}
+
+.img-container {
+  width: 21.8rem;
+  height: 16rem;
+  background-color: #AB5CDB;
+  border-radius: 8px 8px 0px 0px; 
+  opacity: .7511;
+  grid-area: hero;  
+  overflow: hidden;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  height: 108%;
+  mix-blend-mode: multiply;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.main-content {
+  grid-area: main-content;
+  display: grid;
+  grid-template-columns: 2.1rem 17.6rem 2.1rem;
+  grid-template-rows: 2.667rem 6.4rem 1.067rem 6.667rem 2.667rem  1.933rem 1.667rem 1.6rem 1.933rem 1.667rem 1.6rem 1.933rem 1.667rem 2.133rem;
+  grid-template-areas: 
+  ". . ."
+  ". title ."
+  ". . ."
+  ". description ."
+  ". . ."
+  ". ten-k ."
+  ". companies ."
+  ". . ."
+  ". three-1-4 ."
+  ". templates ."
+  ". . ."
+  ". twelve-mil ."
+  ". queries ."
+  ". . ."
+  ;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  line-height: 114.286%;
+  font-size: 1.8666rem;
+  grid-area: title;
+}
+
+span {
+  color: #AB5CDB;
+  font-size: 1.8666rem;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  line-height: 166.667%;
+  font-weight: 400;
+  opacity: 0.75;
+  grid-area: description;
+}
+
+.stat-number {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.stat-name {
+  font-family: 'Lexend Deca', sans-serif;
+  color: #fff;
+  line-height: 208.333%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+@media (min-width: 1110px) {
+
+  .card {
+    width: 74rem;
+    grid-template-rows: 29.7333rem;
+    grid-template-columns: 38rem 36rem;
+    grid-template-areas: "main-content hero" ;
+  }
+
+  .img-container {
+    border-radius: 0px 8px 8px 0px;
+    width: 36rem;
+    height: 29.7333rem;
+  }
+
+  .main-content {
+    width: 36rem;
+    height: 29.7333rem;
+    grid-template-rows: 4.7333rem 5.8667rem 1.667rem 5rem 4.8rem 1.9333rem 1.667rem 3.9333rem;
+    grid-template-columns: 4.7666rem 5.4666rem 4.2666rem 5.2rem 4.0666rem 4.4rem 3.4666rem 6.333rem;
+    grid-template-areas: 
+    ". . . . . . . . ."
+    ". title title title title title title . ."
+    ". . . . . . . . ."
+    ". description description description description description . . ."
+    ". . . . . . . . ."
+    ". ten-k . three-1-4 . twelve-mil . . ."
+    ". companies . templates . queries . . ."
+    ". . . . . . . . ."
+    ;
+  }
+
+  .hero {
+    border-radius: 0px 8px 8px 0px;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .title, .description {
+    text-align: left;
+  }
+
+  .title, span {
+    font-size: 2.4rem;
+  }
+
+  .stat-number {
+    text-align: left;
+  }
+}
